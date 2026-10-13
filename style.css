@@ -1,0 +1,428 @@
+body {
+  margin: 0;
+  font-family: Georgias;
+  background: #eef2ff;
+  color: indigo ;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #4338ca;
+  color: yellow ;
+  text-align: center;
+  padding: 35px 15px;
+  border-radius: 15px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-top: 18px;
+  border-radius: 12px;
+}
+
+h2 {
+  color:purple;
+}
+
+a {
+  display: inline-block;
+  background: #4338ca;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+}
+
+#welcomeBtn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#welcomeBtn:hover {
+  background: #15803d;
+}
+
+#welcomeMessage {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #166534;
+}
+/* Dark mode button */
+#darkModeBtn {
+  display: block;
+  margin: 0 0 15px auto;
+  padding: 12px 16px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Dark theme for the whole page */
+body.dark-mode {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+/* Dark theme for content sections */
+body.dark-mode section {
+  background: #242424;
+  color: #f5f5f5;
+  box-shadow: none;
+}
+
+body.dark-mode section h2 {
+  color: #93c5fd;
+}
+
+body.dark-mode header {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark-mode footer {
+  color: #cccccc;
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+  background: #2563eb;
+  color:green;
+}
+
+/* Button appearance in dark mode */
+body.dark-mode #darkModeBtn {
+  background: #facc15;
+  color: green;
+}
+#typing-text {
+  color:green ;
+  font-weight: bold;
+}
+
+.typing-cursor {
+  display: inline-block;
+  color: #8b5cf6;
+  font-weight: normal;
+  animation: none;
+}
+
+@keyframes  {
+  50% {
+    opacity: 0;
+  }
+}
+#typing-text {
+  display: inline-block;
+  color: #8b5cf6;
+  font-weight: bold;
+  animation: textMove 7s ease-in-out infinite alternate;
+}
+
+@keyframes textMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(25px);
+  }
+}
+
+.typing-cursor {
+  animation: none;
+}
+#typing-text {
+  display: inline-block;
+  color: #8b5cf6;
+  font-weight: bold;
+  animation: smoothFade 60s ease-in-out infinite alternate;
+}
+
+@keyframes smoothFade {
+  0% {
+    opacity: 0.2;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: none;
+  opacity: 1;
+}
+#typing-text {
+  display: inline-block;
+  color: #8b5cf6;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: moveLeft 60s linear infinite;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: none;
+}
+#typing-text {
+  display: inline-block;
+  color:magenta;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: fadeMove 10.2s ease-in-out;
+}
+
+@keyframes fadeMove {
+  0% {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.typing-cursor {
+  animation: none;
+}
+.moving-heading {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.moving-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: continuousMove 60s linear infinite;
+  color: #8b5cf6;
+}
+
+@keyframes continuousMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving-text {
+    animation: slow motion;
+  }
+}
+/* Skills section */
+.skills-section {
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 15px;
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.skill-bar {
+  height: 14px;
+  width: 100%;
+  background: #d3d3d3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  animation: fillBar 2s ease forwards;
+}
+
+/* Individual skill levels */
+.html {
+  --level: 90%;
+  background: linear-gradient(90deg, #ff512f, #ff9800);
+}
+
+.css {
+  --level: 80%;
+  background: linear-gradient(90deg, #2196f3, #00bcd4);
+}
+
+.javascript {
+  --level: 65%;
+  background: linear-gradient(90deg, #f7df1e, #ff9800);
+}
+
+.networking {
+  --level: 75%;
+  background: linear-gradient(90deg, #8e44ad, #e056fd);
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--level);
+  }
+}
+
+/* Dark mode support */
+body.dark-mode .skills-section {
+  background: #222;
+  color: white;
+}
+
+body.dark-mode .skill-bar {
+  background: #444;
+}
+.skills-section {
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 15px;
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.skill-bar {
+  height: 14px;
+  width: 100%;
+  background: #d3d3d3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  transition: width 1.5s ease-out;
+}
+
+/* Animate only when visible */
+.skill-progress.animate {
+  width: var(--level);
+}
+
+/* Individual colors */
+.skill:nth-of-type(1) .skill-progress {
+  background: linear-gradient(90deg, #ff512f, #ff9800);
+}
+
+.skill:nth-of-type(2) .skill-progress {
+  background: linear-gradient(90deg, #2196f3, #00bcd4);
+}
+
+.skill:nth-of-type(3) .skill-progress {
+  background: linear-gradient(90deg, #f7df1e, #ff9800);
+}
+
+.skill:nth-of-type(4) .skill-progress {
+  background: linear-gradient(90deg, #8e44ad, #e056fd);
+}
+
+body.dark-mode .skills-section {
+  background: #222;
+  color: white;
+}
+
+body.dark-mode .skill-bar {
+  background: #444;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-progress {
+    transition: none;
+  }
+}
